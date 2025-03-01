@@ -1,0 +1,9 @@
+test_app_log (__main__.TestDevAssist) ... ok
+test_ask (__main__.TestDevAssist) ... ok
+test_chat (__main__.TestDevAssist) ... ok
+test_create_message (__main__.TestDevAssist) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 36.972s
+
+OK

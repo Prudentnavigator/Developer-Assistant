@@ -1,0 +1,13 @@
+test_delete_model (__main__.LLMTest)
+Test the delete_model function. ... ok
+test_download_install_model (__main__.LLMTest)
+Tests the download_install_model function. ... ok
+test_installed_models (__main__.LLMTest)
+Tests the installed_models function. ... ok
+test_show_model_details (__main__.LLMTest)
+Tests the show_model_details function. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 864.742s
+
+OK
