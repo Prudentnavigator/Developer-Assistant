@@ -1,0 +1,90 @@
+{
+  "CTk": {
+    "fg_color": ["gray85", "black"]
+  },
+  "CTkToplevel": {
+    "fg_color": ["gray85", "gray15"]
+  },
+  "CTkFrame": {
+    "corner_radius": 6,
+    "border_width": 0,
+    "fg_color": ["gray75", "gray15"],
+    "top_fg_color": ["gray85", "gray16"],
+    "border_color": ["gray65", "gray28"]
+  },
+  "CTkButton": {
+    "corner_radius": 6,
+    "border_width": 0,
+    "fg_color": ["#236538", "#067f2c"],
+    "hover_color": ["#08b13e", "#08b13e"],
+    "border_color": ["#3E454A", "#949A9F"],
+    "text_color": ["#DCE4EE", "#DCE4EE"],
+    "text_color_disabled": ["gray74", "gray60"]
+  },
+  "CTkLabel": {
+    "corner_radius": 0,
+    "fg_color": "transparent",
+    "text_color": ["gray14", "gray84"]
+  },
+  "CTkEntry": {
+    "corner_radius": 6,
+    "border_width": 2,
+    "fg_color": ["#F9F9FA", "#343638"],
+    "border_color": ["#979DA2", "#565B5E"],
+    "text_color": ["gray14", "gray84"],
+    "placeholder_text_color": ["gray52", "gray62"]
+  },
+  "CTkProgressBar": {
+    "corner_radius": 1000,
+    "border_width": 0,
+    "fg_color": ["gray", "gray"],
+    "progress_color": ["#0cfd58", "#0cfd58"],
+    "border_color": ["gray", "gray"]
+  },
+  "CTkOptionMenu": {
+    "corner_radius": 6,
+    "fg_color": ["#236538", "#067f2c"],
+    "button_color": ["#023312", "#044c1a"],
+    "button_hover_color": ["#079835", "#08b13e"],
+    "text_color": ["#DCE4EE", "#DCE4EE"],
+    "text_color_disabled": ["gray74", "gray60"]
+  },
+  "CTkScrollbar": {
+    "corner_radius": 1000,
+    "border_spacing": 4,
+    "fg_color": "transparent",
+    "button_color": ["gray55", "gray41"],
+    "button_hover_color": ["gray40", "gray53"]
+  },
+  "CTkTextbox": {
+    "corner_radius": 6,
+    "border_width": 0,
+    "fg_color": ["gray90", "gray20"],
+    "border_color": ["#979DA2", "#565B5E"],
+    "text_color": ["gray14", "gray84"],
+    "scrollbar_button_color": ["gray55", "gray41"],
+    "scrollbar_button_hover_color": ["gray40", "gray53"]
+  },
+  "DropdownMenu": {
+    "fg_color": ["gray90", "gray20"],
+    "hover_color": ["gray75", "gray28"],
+    "text_color": ["gray14", "gray84"]
+  },
+  "CTkFont": {
+    "macOS": {
+      "family": "SF Display",
+      "size": 16,
+      "weight": "normal"
+    },
+    "Windows": {
+      "family": "Roboto",
+      "size": 16,
+      "weight": "normal"
+    },
+    "Linux": {
+      "family": "Roboto",
+      "size": 16,
+      "weight": "normal"
+    }
+  }
+}
