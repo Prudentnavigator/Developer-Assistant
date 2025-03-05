@@ -1,4 +1,4 @@
-***Developer Assistant v1.0.0***
+(ins)***Developer Assistant v1.0.0***(/ins)
 
 This application provides a GUI to interact with LLM's (large language models) that are installed locally with Ollama python API.\
 It allows users to submit requests, receive responses, and attach files to their requests.\
@@ -16,6 +16,7 @@ multiple appearance modes and scaling options.
   or models can also be downloaded    from the app.
 
 > [!TIP]
+> Ensure that the ollama server is    running.
 > In general, larger models will take longer to respond than smaller models.\
 > Would recommend to download multiple models and try them out.
 
