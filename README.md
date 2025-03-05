@@ -1,4 +1,4 @@
-(ins)***Developer Assistant v1.0.0***(/ins)
+<ins>***Developer Assistant v1.0.0***</ins>
 
 This application provides a GUI to interact with LLM's (large language models) that are installed locally with Ollama python API.\
 It allows users to submit requests, receive responses, and attach files to their requests.\
