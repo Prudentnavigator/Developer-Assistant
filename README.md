@@ -1,9 +1,7 @@
 ***Developer Assistant v1.0.0***
 
-This application provides a GUI to interact with LLM's (large language models)
-that are installed locally with Ollama python API.
-It allows users to submit requests, receive responses, and attach files to
-their requests.
+This application provides a GUI to interact with LLM's (large language models) that are installed locally with Ollama python API.\
+It allows users to submit requests, receive responses, and attach files to their requests.\
 The application uses customtkinter for its design and supports
 multiple appearance modes and scaling options. 
 
@@ -14,11 +12,11 @@ multiple appearance modes and scaling options.
 - Search for a model.
   https://ollama.com/search
 - Download a model from the CLI
-  i.e; ollama pull wizardcoder
+  i.e; ollama pull wizardcoder\
   or models can also be downloaded    from the app.
 
 > [!TIP]
-> In general, larger models will take longer to respond than smaller models.
+> In general, larger models will take longer to respond than smaller models.\
 > Would recommend to download multiple models and try them out.
 
 ***Usage:***
