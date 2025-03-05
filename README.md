@@ -16,7 +16,7 @@ multiple appearance modes and scaling options.
   or models can also be downloaded    from the app.
 
 > [!TIP]
-> Ensure that the ollama server is    running.
+> Ensure that the ollama server is    running.\
 > In general, larger models will take longer to respond than smaller models.\
 > Would recommend to download multiple models and try them out.
 
@@ -28,7 +28,7 @@ multiple appearance modes and scaling options.
 
 ***Requirements:***
 - python3.8 or higher 
-- Install packages\                   (see requirements.txt).
+- Install packages                    (see requirements.txt).
 
 ***Hardware Requirements:***
 - A modern CPU with at least 4 cores.
