@@ -10,9 +10,9 @@ multiple appearance modes and scaling options.
 
 ##Installation and setup:
 - Install Ollama for your platform.
-  'https://ollama.com/download'
+  https://ollama.com/download
   - Search for a model.
-  > [https://ollama.com/search]
+  https://ollama.com/search
     - Download a model from the CLI
       > i.e; ollama pull wizardcoder:latest 
       or models can also be downloaded from the app.
