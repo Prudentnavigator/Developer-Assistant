@@ -10,7 +10,7 @@ multiple appearance modes and scaling options.
 
 ***Installation and setup:***
 - Install Ollama for your platform.
-  >https://ollama.com/download<
+  https://ollama.com/download
 - Search for a model.
   https://ollama.com/search
 - Download a model from the CLI
@@ -41,18 +41,17 @@ multiple appearance modes and scaling options.
 
 ***Features:***
 - Confirmation and error messages are displayed in the GUI.
-- Logs are written to the '.dev_assist.log' file on a rotating basis (max 3
-  files).
+- Logs are written to the '.dev_assist.log' file on a          rotating basis (max 3 files).
 - Downloading models.
 - View details of the loaded model.
 - Delete models.
 - Change GUI appearance.
 - Change GUI scaling.
 
-***Contributing:***
+***Contributing:***\
 Contributions are very welcome!\
 Please feel free to open an issue or create a pull request if you have any suggestions for improvements or want to contribute new features. 
 
-***SUPPORT/CONTACT:***
+***SUPPORT/CONTACT:***\
 If you have any questions, need help or want to report a bug, please feel free
 to contact me at tommy_software@mailfence.com.
