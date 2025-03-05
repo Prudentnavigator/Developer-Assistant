@@ -13,7 +13,7 @@ multiple appearance modes and scaling options.
   https://ollama.com/search
 - Download a model from the CLI
   i.e; ollama pull wizardcoder\
-  or models can also be downloaded    from the app.
+  (models can also be downloaded      from the app).
 
 > [!TIP]
 > Ensure that the ollama server is    running.\
