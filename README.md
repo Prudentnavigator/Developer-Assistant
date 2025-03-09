@@ -6,7 +6,7 @@ The application uses customtkinter for its design and supports
 multiple appearance modes and scaling options. 
 
 ! [dark starup screen]
-(ScreenShots/1_start_screen_dark_theme.png)
+(/ScreenShots/1_start_screen_dark_theme.png)
 
 ### ***Installation and setup:***
 - Install Ollama for your platform.
