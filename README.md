@@ -24,7 +24,7 @@ multiple appearance modes and scaling options.
 1. Start by running the script:
 
 
-         main.py
+         python3 main.py
    
 
 >[!NOTE]
