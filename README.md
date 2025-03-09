@@ -22,7 +22,7 @@ multiple appearance modes and scaling options.
 > Would recommend to download multiple models and try them out.
 
 ### ***Usage:***
-1. Start by running the script.
+1. Start by running the script:
 
      main.py
    
