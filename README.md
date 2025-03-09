@@ -22,10 +22,14 @@ multiple appearance modes and scaling options.
 > Would recommend to download multiple models and try them out.
 
 ### ***Usage:***
-1. Start by running the script and load a language model by selecting it from the dropdown menu ("choose model").
-2. Enter your request in the text entry field. Attach a text file with the "attach file" button to add to the request (optional).     A text can also be pasted into the text entry field (i.e. a code snippet) from the clipboard by using keyboard shortcuts (ctrl-v for linux).
-3. Submit the request using the "Submit" button.
-4. Receive a response from the LLM, which will be displayed in the reply textbox.
+1. Start by running the script.
+
+     main.py
+   
+3. Load a language model by selecting it from the dropdown menu ("choose model").
+4. Enter your request in the text entry field. Attach a text file with the "attach file" button to add to the request (optional).     A text can also be pasted into the text entry field (i.e. a code snippet) from the clipboard by using keyboard shortcuts (ctrl-v for linux).
+5. Submit the request using the "Submit" button.
+6. Receive a response from the LLM, which will be displayed in the reply textbox.
 
 ### ***Requirements:***
 - python3.8 or higher 
