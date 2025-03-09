@@ -1,12 +1,9 @@
-<ins>***Developer Assistant v1.0.0***</ins>
+# <ins>***Developer Assistant v1.0.0***</ins>
 
 This application provides a GUI to interact with LLM's (large language models) that are installed locally with Ollama.\
 It allows users to submit requests, receive responses, and attach files to their requests.\
 The application uses customtkinter for its design and supports
 multiple appearance modes and scaling options. 
-
-![dark startup screen]
-(/ScreenShots/1_start_screen_dark_theme.png)
 
 ***Installation and setup:***
 - Install Ollama for your platform.
