@@ -17,7 +17,7 @@ multiple appearance modes and scaling options.
   (models can also be downloaded      from the app).
 
 > [!TIP]
-> In general, larger models will take longer to respond than smaller models.\
+> In general, larger models will take longer to respond than smaller models.
 > Would recommend to download multiple models and try them out.
 
 ### ***Usage:***
@@ -45,7 +45,7 @@ multiple appearance modes and scaling options.
 ### ***Features:***
 - Confirmation and error messages are displayed in the GUI.
 - Logs are written to the '.dev_assist.log' file on a          rotating basis (max 3 files).
-- Downloading models.
+- Download models.
 - View details of the loaded model.
 - Delete models.
 - Change GUI appearance.
