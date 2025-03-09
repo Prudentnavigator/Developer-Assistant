@@ -5,6 +5,8 @@ It allows users to submit requests, receive responses, and attach files to their
 The application uses customtkinter for its design and supports
 multiple appearance modes and scaling options. 
 
+![startup screen](ScreenShot/1_start_screen_dark_theme.png)
+
 ### ***Installation and setup:***
 - Install Ollama for your platform.
   https://ollama.com/download
