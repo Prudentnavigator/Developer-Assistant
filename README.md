@@ -65,5 +65,4 @@ Contributions are very welcome!\
 Please feel free to open an issue or create a pull request if you have any suggestions for improvements or want to contribute new features. 
 
 ### ***SUPPORT/CONTACT:***
-If you have any questions, need help or want to report a bug, please feel free
-to contact me at tommy_software@mailfence.com.
+If you have any questions, need help or want to report a bug, please contact me at tommy_software@mailfence.com.
