@@ -30,7 +30,7 @@ multiple appearance modes and scaling options.
 
 >[!NOTE]
 > Ensure that the ollama server is running.
-2. Load a language model by selecting it from the dropdown menu ("choose model").
+2. Load a language model by selecting it from the dropdown menu ("Load model").
 
 3. Enter your request in the text entry field. Attach a text file with the "attach file" button to add to the request (optional).
    A text can also be pasted into the text entry field (i.e. a code snippet) from the clipboard by using keyboard shortcuts (ctrl-v for linux).
