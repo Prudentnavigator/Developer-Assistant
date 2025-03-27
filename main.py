@@ -109,12 +109,6 @@ class DevAssistant(ctk.CTk):
         """
         This method is used to display a dialog box based on the
         given `caller`.
-
-        Args:
-            caller (str): The name of the method that triggered this method.
-
-        Returns:
-            str: A string of the name of the model.
         """
 
         if caller is None:
