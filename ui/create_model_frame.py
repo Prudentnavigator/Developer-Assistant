@@ -49,12 +49,6 @@ class CreateModelFrame(ctk.CTkFrame):
         """
         This method creates the GUI elements to create a new model and
         canceling this process.
-
-        Args:
-            None
-
-        Returns:
-            None
         """
 
         # Create tabviews.
@@ -105,12 +99,6 @@ class CreateModelFrame(ctk.CTkFrame):
         """
         This method is responsible for creating the layout of the
         GUI elements.
-
-        Args:
-            None
-
-        Returns:
-            None
         """
 
         self.widget["tabs"].grid(row=0,
@@ -179,12 +167,6 @@ class CreateModelFrame(ctk.CTkFrame):
         Creates a new model by using a popup dialog from the parent class
         to request the user for a name of the model and passes the name and
         modelfile to the 'lm_create_model()'.
-
-        Args:
-            None
-
-        Returns:
-            None
         '''
 
         # Request the user to provide a name for the new model.
@@ -214,12 +196,6 @@ class CreateModelFrame(ctk.CTkFrame):
         """
         Cancels the creation of a model and destroys the frame
         of the create model functionality.
-
-        Args:
-            None
-
-        Returns:
-            None
         """
 
         logger.debug(" create model -> canceled.")

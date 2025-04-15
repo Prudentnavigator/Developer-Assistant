@@ -181,7 +181,7 @@ class SideBarFrame(ctk.CTkFrame):
                                             padx=10,
                                             pady=(5, 10))
 
-        mode = gui_settings.get_appearance_mode(menu=True)
+        mode = gui_settings.get_appearance_mode(change_setting=False)
 
         self.widget["appearance_menu"].set(mode)
 
@@ -196,7 +196,8 @@ class SideBarFrame(ctk.CTkFrame):
                                          pady=(5, 20))
 
         # Set initial value of the scale.
-        self.widget["scaling_menu"].set(value="100%")
+        scale = gui_settings.get_scale(change_setting=False)
+        self.widget["scaling_menu"].set(scale)
 
         self.widget["copyright_label"].grid(row=11,
                                             column=0,

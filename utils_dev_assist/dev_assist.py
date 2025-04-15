@@ -91,7 +91,7 @@ def ask(query: str, llm: str, add_file: str) -> str:
 
     # Append user query to the chat_messages.
     chat_messages.append(create_message(query, "user"))
-    # Send the query to the API and store the resopnse.
+    # Send the query to the API and store the response.
     response = chat(llm)
 
     # Return the API response to the GUI.

@@ -25,7 +25,7 @@ logger = app_log(__name__)
 class MainFrame(ctk.CTkFrame):
     '''
     Class to create the main frame for the DeveloperAssistant GUI with
-    widgets for interacting with a model.
+    widgets to interact with a model.
     '''
 
     def __init__(self, DevAssistant):
@@ -168,12 +168,6 @@ class MainFrame(ctk.CTkFrame):
     def check_welcome_label_widget(self) -> None:
         '''
         Checks if the welcome label widget is displayed and if so, remove it.
-
-        Args:
-          None
-
-        Returns:
-            None
         '''
 
         if self.widget["welcome_label"]:
@@ -204,12 +198,6 @@ class MainFrame(ctk.CTkFrame):
         Opens a file dialog to allow the user to select a file to attach to
         the request. If no file is selected, sets `self.attach_file` to an
         empty string.
-
-        Args:
-            None
-
-        Returns:
-            None
         """
 
         # Store the chosen file including its path.
