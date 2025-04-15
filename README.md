@@ -30,7 +30,7 @@ multiple appearance modes and scaling options.
 
 >[!NOTE]
 > Ensure that the ollama server is running.
-2. Load a language model by selecting it from the dropdown menu ("choose model").
+2. Load a language model by selecting it from the dropdown menu ("Load model").
 
 3. Enter your request in the text entry field. Attach a text file with the "attach file" button to add to the request (optional).
    A text can also be pasted into the text entry field (i.e. a code snippet) from the clipboard by using keyboard shortcuts (ctrl-v for linux).
@@ -66,5 +66,4 @@ Contributions are very welcome!\
 Please feel free to open an issue or create a pull request if you have any suggestions for improvements or want to contribute new features. 
 
 ### ***SUPPORT/CONTACT:***
-If you have any questions, need help or want to report a bug, please feel free
-to contact me at tommy_software@mailfence.com.
+If you have any questions, need help or want to report a bug, please contact me at tommy_software@mailfence.com.

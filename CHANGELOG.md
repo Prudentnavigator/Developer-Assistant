@@ -17,7 +17,8 @@
 > - Changed model details button to model info which allows the user to view
     details, modelfile, parameter, template, system, adapter and license of the
     loaded model.
+
 > - Removed the model details functionality.
 
 ### ***1.0.0***
-> -Initital release
+> - Initital release
