@@ -38,7 +38,8 @@ multiple appearance modes and scaling options.
 5. Receive a response from the LLM, which will be displayed in the reply textbox.
 
 ## ***Requirements:***
-- python3.8 or higher 
+- python3.12.3 or newer 
+- ollama 0.6.3 or newer
 - Install packages                    (see requirements.txt).
 
 

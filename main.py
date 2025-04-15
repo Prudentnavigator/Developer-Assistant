@@ -20,10 +20,10 @@ Developer Assistant -- this application provides a GUI to interact with
 import threading
 import customtkinter as ctk
 from CTkMessagebox import CTkMessagebox
-from ui.create_model_frame import CreateModelFrame
 from ui.main_frame import MainFrame
-from ui.model_info_frame import ModelInfoFrame
 from ui.sidebar_frame import SideBarFrame
+from ui.model_info_frame import ModelInfoFrame
+from ui.create_model_frame import CreateModelFrame
 from utils_dev_assist import llm_models as lm
 from utils_dev_assist.dev_assist_logging import app_log
 
@@ -42,7 +42,7 @@ class DevAssistant(ctk.CTk):
         super().__init__()
 
         # Configure main window.
-        self.title("Developer Assistant v1.1.16")
+        self.title("Developer Assistant v1.1.17")
         self.geometry(f"{1100}x{580}")
 
         # Configure grid layout (4x4).
@@ -64,7 +64,14 @@ class DevAssistant(ctk.CTk):
         Loads the sidebar frame into to app.
         '''
 
-        self.llm["models"] = lm.installed_models()
+        try:
+            self.llm["models"] = lm.installed_models()
+
+        except ConnectionError as error:
+            self.popup_message(caller="server_connection",
+                               msg=error,
+                               icon="warning")
+
         SideBarFrame(self)
 
     def load_create_model_frame(self) -> None:
@@ -109,12 +116,6 @@ class DevAssistant(ctk.CTk):
         """
         This method is used to display a dialog box based on the
         given `caller`.
-
-        Args:
-            caller (str): The name of the method that triggered this method.
-
-        Returns:
-            str: A string of the name of the model.
         """
 
         if caller is None:
@@ -146,11 +147,23 @@ class DevAssistant(ctk.CTk):
 
             return model_name
 
-    def popup_message(self, caller: str, msg: str = "", icon: str = "info") -> None | str:
+    def popup_message(self, caller: str,
+                      msg: str = "",
+                      icon: str = "info") -> None | str:
         """
         This method is used to display a message box based on the
         given `caller`.
         """
+
+        if caller == "server_connection":
+            CTkMessagebox(title="Ollama Server",
+                          message=msg,
+                          icon=icon,
+                          option_1="ok",
+                          justify="center",
+                          fade_in_duration=2)
+
+            logger.debug(" [GUI] load model reminder msg -> displayed.")
 
         if caller == "check_model_loaded":
             CTkMessagebox(title="Reminder",
