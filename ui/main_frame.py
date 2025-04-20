@@ -11,6 +11,7 @@ main_frame.py--Creates the main frame for interacting with a LLM for the
                Developer Assistant app.
 '''
 
+import platform
 from time import sleep
 import threading
 from PIL import Image
@@ -27,6 +28,8 @@ class MainFrame(ctk.CTkFrame):
     Class to create the main frame for the DeveloperAssistant GUI with
     widgets to interact with a model.
     '''
+    OS = platform.system().upper()
+    logger.debug("[SYSTEM] OS -> %s", OS)
 
     def __init__(self, DevAssistant):
         super().__init__(DevAssistant)
@@ -49,6 +52,7 @@ class MainFrame(ctk.CTkFrame):
                        "request_text": None,
                        "submit_button": None,
                        "addfile_button": None,
+                       "stop_request_button": None,
                        "ai_response_textbox": None,
                        "progressbar": None}
 
@@ -102,17 +106,16 @@ class MainFrame(ctk.CTkFrame):
                                                             font=("", 20),
                                                             corner_radius=40)
 
-        # image to be used for the welcome label.
         img_path = "assets/welcome_screen.jpg"
-        welc_image = ctk.CTkImage(light_image=Image.open(img_path),
-                                  size=(1600, 840))
+        start_screen_image = ctk.CTkImage(light_image=Image.open(img_path),
+                                          size=(1600, 840))
 
         # label for displaying a welcome image on app startup.
         # it will be removed from the layout when the first request
         # is submitted.
         welcome_text = "-->  Developer Assistant  <--"
         self.widget["welcome_label"] = ctk.CTkLabel(self,
-                                                    image=welc_image,
+                                                    image=start_screen_image,
                                                     text=welcome_text,
                                                     text_color="white",
                                                     font=("", 50),
@@ -192,6 +195,33 @@ class MainFrame(ctk.CTkFrame):
                                                 sticky="nsew")
 
         logger.debug(" [GUI] textbox widget added to the layout.")
+
+    def stop_request_button(self, add: bool = True) -> bool:
+        '''
+        Adds the stop request button to the GUI layout or removes it.
+        '''
+
+        if add:
+            green = ("#236538", "#067f2c")
+            cmd = self.stop_request
+            self.widget["stop_request_button"] = ctk.CTkButton(
+                                                        self,
+                                                        fg_color="transparent",
+                                                        border_width=2,
+                                                        border_color=green,
+                                                        text="stop request",
+                                                        text_color=("gray10",
+                                                                    "#dce4ee"),
+                                                        command=cmd)
+
+            self.widget["stop_request_button"].grid(row=4,
+                                                    column=2,
+                                                    padx=(20, 20),
+                                                    pady=(20, 30),
+                                                    sticky="w")
+
+        else:
+            self.widget["stop_request_button"].destroy()
 
     def select_file(self) -> None:
         """
@@ -281,6 +311,9 @@ class MainFrame(ctk.CTkFrame):
         self.widget["submit_button"].configure(state="disabled")
         self.widget["addfile_button"].configure(state="disabled")
 
+        if self.OS in ("LINUX", "DARWIN"):
+            self.stop_request_button()
+
         self.request = self.widget["request_text"].get()
 
         msg = f"\u27BE Your request: {self.request}\n"
@@ -299,7 +332,30 @@ class MainFrame(ctk.CTkFrame):
                                           self.parent.llm["model"],
                                           self.attach_file)
 
-        if self.ai_response.startswith("error"):
+        self.progressbar(start=False)
+        self.stop_request_button(add=False)
+        self.display_response()
+
+        self.widget["submit_button"].configure(state="normal")
+        self.widget["addfile_button"].configure(state="normal")
+
+    def stop_request(self) -> None:
+        '''
+        Stops the request made to the Ollama server.
+        '''
+
+        dev_assist.restart_ollama_server(MainFrame.OS)
+        self.stop_request_button(add=False)
+
+    def display_response(self) -> None:
+        """
+        Displays the response in the reply textbox widget, character by
+        character, with a slight delay between each character to
+        simulate typing.
+        """
+
+        if self.ai_response.startswith("error") or \
+           self.ai_response.startswith("Server"):
             self.parent.popup_message("response_error", self.ai_response)
 
             self.progressbar(start=False)
@@ -307,30 +363,16 @@ class MainFrame(ctk.CTkFrame):
 
         else:
             self.widget["ai_response_textbox"].configure(wrap="word")
-
-            self.progressbar(start=False)
             self.copy_to_clipboard()
-            self.display_response()
 
-        self.widget["submit_button"].configure(state="normal")
-        self.widget["addfile_button"].configure(state="normal")
+            for char in self.ai_response:
+                self.widget["ai_response_textbox"].insert("end", char)
+                self.widget["ai_response_textbox"].yview_moveto(1.0)
+                self.widget["ai_response_textbox"].configure(
+                                                           require_redraw=True
+                                                           )
 
-    def display_response(self, response="") -> None:
-        """
-        Displays the response in the reply textbox widget, character by
-        character, with a slight delay between each character to
-        simulate typing.
-        """
-
-        if response != "":
-            self.ai_response = response
-
-        for char in self.ai_response:
-            self.widget["ai_response_textbox"].insert("end", char)
-            self.widget["ai_response_textbox"].yview_moveto(1.0)
-            self.widget["ai_response_textbox"].configure(require_redraw=True)
-
-            sleep(0.04)
+                sleep(0.04)
 
         logger.info(" [GUI] response --> displayed.")
 

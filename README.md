@@ -38,8 +38,8 @@ multiple appearance modes and scaling options.
 5. Receive a response from the LLM, which will be displayed in the reply textbox.
 
 ## ***Requirements:***
-- python3.12.3 or newer 
-- ollama 0.6.3 or newer
+- python >=3.12.3 
+- ollama >=0.6.3
 - Install packages                    (see requirements.txt).
 
 
@@ -59,6 +59,7 @@ multiple appearance modes and scaling options.
 - Delete models.
 - Change GUI appearance.
 - Change GUI scaling.
+- Stop requests (Linux/Mac).
 - Logs are written to the '.dev_assist.log' file on a          rotating basis (max 3 files).
 
 ### ***Contributing:***
