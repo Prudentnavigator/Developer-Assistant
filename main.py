@@ -42,7 +42,7 @@ class DevAssistant(ctk.CTk):
         super().__init__()
 
         # Configure main window.
-        self.title("Developer Assistant v1.1.17")
+        self.title("Developer Assistant v1.11.17")
         self.geometry(f"{1100}x{580}")
 
         # Configure grid layout (4x4).
