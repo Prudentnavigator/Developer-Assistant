@@ -21,6 +21,8 @@ multiple appearance modes and scaling options.
 > In general, larger models will take longer to respond than smaller models.
 > Would recommend to download multiple models and try them out.
 
+![startup screen](ScreenShots/8_example_query.png)
+
 ## ***Usage:***
 1. Start by running the script:
 
