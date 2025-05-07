@@ -42,10 +42,22 @@ multiple appearance modes and scaling options.
 ## ***Requirements:***
 - python >=3.12.3 
 - ollama >=0.6.3
-- Install packages                    (see requirements.txt).
+- Install dependencies:
 
 
-        pip3 install -r requirements.txt
+            pip3 install -r requirements.txt
+
+
+    or
+
+
+            uv pip3 install -r requirements.txt
+
+
+    or
+
+
+            uv add -r requirements.txt
 
 
 ## ***Hardware Requirements:***
